@@ -1187,7 +1187,7 @@ within 500ms of each other.
      - Type
      - Details
    * - ``caseSensitive``
-     - boolean
+     - Boolean
      - 'true' if the case sensitive option is selected. 
        
        'false' if this option is not selected.
@@ -1196,7 +1196,7 @@ within 500ms of each other.
      - string
      - The name of the PDF file. 
    * - ``highlightAll``
-     - boolean
+     - Boolean
      - 'true' if the option to highlight all matches is selected. 
        
        'false' if this option is not selected.
@@ -1239,7 +1239,7 @@ clicks on the Find Next or Find Previous icons for an entered search string.
      - Type
      - Details
    * - ``caseSensitive``
-     - boolean
+     - Boolean
      - 'true' if the case sensitive option is selected. 
        
        'false' if this option is not selected.
@@ -1248,13 +1248,13 @@ clicks on the Find Next or Find Previous icons for an entered search string.
      - string
      - The name of the PDF file. 
    * - ``findprevious``
-     - boolean
+     - Boolean
      - 'true' if the user clicks the Find Previous icon. 
        
        'false' if the user clicks the Find Next icon.
 
    * - ``highlightAll``
-     - boolean
+     - Boolean
      - 'true' if the option to highlight all matches is selected. 
        
        'false' if this option is not selected.
@@ -1297,7 +1297,7 @@ selects or clears the **Highlight All** option for a search.
      - Type
      - Details
    * - ``caseSensitive``
-     - boolean
+     - Boolean
      - 'true' if the case sensitive option is selected. 
        
        'false' if this option is not selected.
@@ -1306,7 +1306,7 @@ selects or clears the **Highlight All** option for a search.
      - string
      - The name of the PDF file. 
    * - ``highlightAll``
-     - boolean
+     - Boolean
      - 'true' if the option to highlight all matches is selected. 
        
        'false' if this option is not selected.
@@ -1349,7 +1349,7 @@ user selects or clears the **Match Case** option for a search.
      - Type
      - Details
    * - ``caseSensitive``
-     - boolean
+     - Boolean
      - 'true' if the case sensitive option is selected. 
        
        'false' if this option is not selected.
@@ -1358,7 +1358,7 @@ user selects or clears the **Match Case** option for a search.
      - string
      - The name of the PDF file. 
    * - ``highlightAll``
-     - boolean
+     - Boolean
      - 'true' if the option to highlight all matches is selected.
        
        'false' if this option is not selected.
@@ -1876,6 +1876,213 @@ for a problem and it is graded successfully.
 ==========================
 Forum Events
 ==========================
+
+``edx.forum.discussion.created``
+*********************************
+
+After a user creates a new thread by clicking **New Post** and then submitting
+their contribution, the server emits an ``edx.forum.discussion.created``
+event.
+
+**Component**: Discussion
+
+**Event Source**: Server
+
+**History**: Added 23 Dec 2014.
+
+``event`` **Member Fields**:
+
+.. list-table::
+   :widths: 15 15 60
+   :header-rows: 1
+
+   * - Field
+     - Type
+     - Details
+   * - ``anonymous``
+     - Boolean
+     - Applies only to courses that allow discussion posts that are anonymous
+       to all other users.
+       
+       'true' if the user selected the **Post Anonymously** check box.
+
+       'false' if the user cleared the **Post Anonymously** check box
+
+   * - ``anonymous_to_peers``
+     - Boolean
+     - 
+     - Applies only to courses that allow discussion posts that are anonymous
+       to other students. The username of the thread creator remains visible
+       to users who have discussion-level privileges.
+       
+       'true' if the user selected the **Post Anonymously** check box.
+
+       'false' if the user cleared the **Post Anonymously** check box
+
+
+   * - ``body``
+     - string
+     - The text supplied for the post.
+   * - ``category_id``
+     - 
+     - 
+   * - ``category_name``
+     - string
+     - 
+   * - ``commentable_id``
+     - string
+     - 
+   * - ``id``
+     - string
+     - 
+   * - ``options``
+     - dictionary
+     - 
+   * - ``title``
+     - string
+     - Descriptive text supplied to identify the post.
+   * - ``truncated``
+     - Boolean
+     - 'true' if . 
+       
+       'false' if .
+
+   * - ``url``
+     - string
+     - 
+   * - ``user_course_role``
+     - string
+     - Identifies the course-level privileges assigned to the user.
+
+       Each user is a 'Student' or a course 'Beta Tester', Instructor', or
+       'Course Staff' member.
+
+   * - ``user_forums_role``
+     - string
+     - Identifies the discussion-level privileges assigned to the user.
+
+       Each user is a 'Student' or a 'Community TA', 'Discussion Moderator',
+       or 'Discussion Admin'.
+
+
+
+
+``edx.forum.response.created``
+*********************************
+
+
+**Component**: Discussion
+
+**Event Source**: Server
+
+**History**: Added 23 Dec 2014. 
+
+``event`` **Member Fields**:
+
+.. list-table::
+   :widths: 15 15 60
+   :header-rows: 1
+
+   * - Field
+     - Type
+     - Details
+   * - ``body``
+     - string
+     - 
+   * - ``category_id``
+     - 
+     - 
+   * - ``category_name``
+     - string
+     - 
+   * - ``commentable_id``
+     - string
+     - 
+   * - ``discussion``
+     - 
+     - 
+   * - ``id``
+     - string
+     - 
+   * - ``options``
+     - dictionary
+     - 
+   * - ``truncated``
+     - Boolean
+     - 'true' if . 
+       
+       'false' if .
+
+   * - ``url``
+     - string
+     - 
+   * - ``user_course_role``
+     - 
+     - 
+   * - ``user_forums_role``
+     - 
+     - 
+
+
+``edx.forum.comment.created``
+*********************************
+
+
+**Component**: Discussion
+
+**Event Source**: Server
+
+**History**: Added 23 Dec 2014.
+
+``event`` **Member Fields**:
+
+.. list-table::
+   :widths: 15 15 60
+   :header-rows: 1
+
+   * - Field
+     - Type
+     - Details
+   * - ``body``
+     - string
+     - 
+   * - ``category_id``
+     - 
+     - 
+   * - ``category_name``
+     - string
+     - 
+   * - ``commentable_id``
+     - string
+     - 
+   * - ``discussion``
+     - dictionary
+     - contains an ``id`` member field
+   * - ``id``
+     - string
+     - 
+   * - ``options``
+     - dictionary
+     - contains a ``followed`` member field Boolean
+   * - ``response``
+     - 
+     - 
+   * - ``truncated``
+     - Boolean
+     - 'true' if . 
+       
+       'false' if .
+
+   * - ``url``
+     - string
+     - 
+   * - ``user_course_role``
+     - string
+     - 
+   * - ``user_forums_role``
+     - string
+     - 'Student', 
+
 
 ``edx.forum.searched``
 *********************************
