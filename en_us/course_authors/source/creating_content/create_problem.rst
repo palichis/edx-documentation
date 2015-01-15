@@ -317,7 +317,7 @@ problem. The problem weight appears next to the problem title.
  :alt: Image of a problem from a student's point of view, with the possible 
        points circled
 
-By default, each response field, or "answer space, in a Problem
+By default, each response field, or "answer space", in a Problem
 component is worth one point. Any Problem component can have multiple
 response fields. For example, the Problem component above
 contains one dropdown problem that has three separate questions for students

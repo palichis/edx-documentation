@@ -15,7 +15,7 @@ a selected problem.
 
 * :ref:`score_histogram`
 
-Student answer distribution data, including both charts and reports, are also
+Student answer distribution data, including both charts and reports, is also
 available from edX Insights. For more information, see `Using edX Insights`_.
 
 .. _Student_Answer_Submission:
