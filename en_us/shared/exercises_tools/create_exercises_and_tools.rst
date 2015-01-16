@@ -59,7 +59,7 @@ General Exercises and Tools
    * - .. image:: /Images/CITL_AssmtTypes.png
           :width: 100
           :alt: Example open response assessment
-     - :ref:`Open Response Assessment`
+     - :ref:`Open Response Assessments`
      - In open response assessments, students receive feedback on written responses of varying lengths as well as files, such as computer code or images, that the students upload. Open response assessments include self assessment and peer assessment.
    * - .. image:: /Images/PollExample.png
           :width: 100
