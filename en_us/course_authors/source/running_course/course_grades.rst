@@ -111,7 +111,9 @@ After you request a grade report for your students, the result is a time-
 stamped CSV file that includes columns to identify each student: id, email, and
 username. It also includes a column for every assignment that is included in
 your grading configuration: each homework, lab, midterm, final, and any other
-assignment type you added to your course.
+assignment type you added to your course. If your course uses cohorts or content
+experiments, the grade report includes additional columns indicating the name of
+the cohort or experiment group that each student belongs to.
 
 .. important:: Because this file contains confidential, personally 
  identifiable data which may be subject to the Family Educational Rights and
@@ -167,6 +169,16 @@ provide the following information.
 * An **{assignment type} Avg** with each student's current average score for
   that assignment type: for example, HW Avg.
 
+* If cohorts are used in the course, a **Cohort Name** column indicating the
+  name of the cohort that each student belongs to. The column is empty if
+  students have not yet been added to a cohort.
+
+* If content experiments are used in the course, a **Group Configuration Group
+  Name** column indicating the name of the experiment group that each student
+  belongs to within a group configuration. The column heading includes the name
+  of the group configuration. The column is empty if students have not yet been
+  added to an experiment group.
+
 .. note:: The grade reports do not include information about individual 
  questions within the assignments, or include student answer distributions.
 
@@ -213,9 +225,20 @@ The gradebook includes the following features.
   with a grade of 65 has earned 65% of the credit in the course, and a student
   with a grade of 100 has earned 100%.
 
+* If cohorts are used in the course, a **Cohort Name** column indicating the
+  name of the cohort that each student belongs to. The column is empty if
+  students have not yet been added to a cohort.
+
+* If content experiments are used in the course, a **Group Configuration Group
+  Name** column indicating the name of the experiment group that each student
+  belongs to within a group configuration. The column heading includes the name
+  of the group configuration. The column is empty if students have not yet been
+  added to an experiment group.
+
 * To filter the data that displays you can use the **Search students** option.
   This option is case-sensitive and limits the rows shown in the gradebook to
   usernames that match your entry.
+
 
 .. _check_student_progress:
 
